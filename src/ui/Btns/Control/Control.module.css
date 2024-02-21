@@ -1,0 +1,119 @@
+
+.controlAll{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* height: 100%; */
+    gap: 32px;
+}
+
+.control button,
+.control p {
+  outline: 1px solid #ddd; 
+  margin: 0; 
+  width: 100%;
+  font-size: 24px;
+ 
+  
+}
+
+.control > p {
+    /* width: 96px; */
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.control {
+    display: flex;
+    /* justify-content: space-between; */
+    /* position: relative; */
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    /* display: flex; */
+    /* gap: 32px;
+    align-items: stretch; */
+}
+.control button:first-child{
+    /* position: absolute; */
+}
+.control p{
+    /* position: absolute; */
+    /* left: 30px; */
+    height: 100%;
+}
+.control button:last-child{
+    /* position: absolute; */
+    /* left: 100px; */
+
+    
+}
+
+.control button{
+    /* height: 100%; */
+    width: 58px;
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+}
+.control p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--black);
+    border-bottom: 1px solid var(--grey-divider);
+    border-top: 1px solid var(--grey-divider);
+    width: 90px;
+
+}
+@media (max-width: 1000px) {
+    .controlAll{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* height: 100%; */
+        gap: 0px;
+    }
+    .control button{
+        /* height: 100%; */
+        width: 50px;
+        aspect-ratio: 1;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .control p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        text-align: center;
+        color: var(--black);
+        border-bottom: 1px solid var(--grey-divider);
+        border-top: 1px solid var(--grey-divider);
+        width: 50px;
+    
+    }
+}
+@media (max-width: 768px) {
+    .controlAll{
+        grid-template-columns: 1fr;
+ 
+        gap: 20px;
+    }
+}
+
+@media (max-width:360px) {
+    .controlAll{
+        /* position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%; */
+        gap: 12px;
+    }
+}

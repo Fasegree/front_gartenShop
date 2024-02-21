@@ -1,0 +1,168 @@
+/* .productCard{
+    display: flex;
+    gap: 32px;
+}
+.productCard img{
+    width: 780px;
+    border-radius: 12px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.cardPrice{
+    display: flex;
+}
+
+.controlBtn{
+    height: 58px;
+    gap: 32px;
+} */
+/* ====================================================== */
+
+
+
+
+
+
+
+.productCard {
+    display: flex;
+    gap: 32px;
+    margin: 0 40px;
+}
+
+.productCard img {
+    max-width: 780px;
+    /* height: 572px;
+    height: 100%; */
+    border-radius: 12px;
+}
+
+.description {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cardPrice {
+    align-items: baseline;
+    display: flex;
+    gap: 32px;
+}
+
+.controlBtn {
+    height: 58px;
+    gap: 32px;
+}
+
+.controlAll {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* height: 100%; */
+    gap: 32px;
+}
+
+.control button,
+.control p {
+    outline: 1px solid #ddd;
+    margin: 0;
+    width: 100%;
+}
+
+.control>p {
+    width: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 32px;
+    align-items: stretch;
+}
+
+.control button:first-child {
+    position: absolute;
+}
+
+.control p {
+    position: absolute;
+    left: 30px;
+    /* height: 100%; */
+}
+
+.control button:last-child {
+    position: absolute;
+    left: 100px;
+}
+
+.control button {
+    font-size: 30px;
+    width: 58px;
+    aspect-ratio: 1;
+    color: rgb(199, 199, 199);
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.productTitle {
+    font-size: 40px;
+}
+
+.oldPrice {
+    color: var(--grey);
+    font-size: 40px;
+    text-decoration: line-through;
+    position: relative;
+    font-weight: 500;
+}
+
+.currentPrice {
+    color: var(--black);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.discount {
+    background-color: var(--green);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+    right: 20px;
+}
+
+.textDisc p {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 1000px) {
+    
+}
+@media (max-width: 768px) {
+    .productCard {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 40px;
+    }
+}
+@media (max-width: 480px) {
+    
+}
+@media (max-width: 360px) {
+    
+}

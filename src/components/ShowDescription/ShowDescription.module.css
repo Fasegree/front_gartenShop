@@ -1,0 +1,26 @@
+.showDescription a{
+    margin-top: 16px;
+    color: var(--txt-black, #8B8B8B);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    cursor: pointer;
+    text-decoration:underline;
+}
+.showDescription p{
+    /* font-weight: 400; */
+    /* font-size: 16px; */
+    line-height: 130%;
+    color: var(--black);
+}
+.titleDescr{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+.txtDescr{
+    margin-bottom: 16px;  
+}

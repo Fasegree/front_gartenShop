@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+	--green: #393;
+	--white: #fff;
+	--black: #282828;
+	--grey-divider: #ddd;
+	--grey: #8b8b8b;
+	--light-grey: #f1f3f4;
+	--txt-black: #282828;
+	--txt-white: #fff;
+	--txt-grey: #8b8b8b;
+}
+.app {
+    position: relative;
+}
+
+/* vmesto wrapper */
+/* ======================== */
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+
+}
+.wrapper {
+
+    margin-left: 40px;
+    margin-right: 40px;
+}
+/* ========================= */
+h1 {
+    margin-top: 80px;
+    color: var(--txt-white);
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+h2 {
+    color: var(--txt-black, #282828); 
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 70.4px */
+    margin: 40px 0 40px 0px;
+}
+h3 {
+    color: var(--txt-black, #282828);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 44px */
+    padding-bottom: 24px;
+}
+h4 {
+    
+}
+/*  Product Card */
+.discountPercent{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: var(--white);
+}
+.subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--black);
+}
+.currentPrice{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 110%;
+    color: var(--black);
+}
+.oldPrice{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-decoration: line-through;
+    color: var(--grey);
+}
+/*  /productCard */
+.cardsList {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 32px;
+}
+.addProductToCartDiv{    
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.show {
+    opacity: 1;
+  
+}
+a {
+    text-decoration: none;
+    color: var(--txt-black, #282828);
+}
+p {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+}
+@media (max-width: 1000px) {
+    .wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .cardsList {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+    /*  Product Card */
+    h1 {
+   
+        font-size: 89px;
+        width: 100vw;
+        line-height: 99px;
+    }
+.discountPercent{
+}
+.subtitle{
+ 
+}
+.currentPrice{
+
+}
+.oldPrice{
+
+}
+/*  /productCard */
+}
+@media (max-width: 768px) {
+    .wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .cardsList {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 32px;
+    }
+
+    h2 {
+        margin-right: 0;
+        margin-left: 0;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+    }
+    /*  Product Card */
+.discountPercent{
+ 
+}
+.subtitle{
+
+}
+.currentPrice{
+ 
+}
+.oldPrice{
+
+}
+/*  /productCard */
+}
+
+@media (max-width: 480px) {
+    /*  Product Card */
+.discountPercent{
+    font-size: 18px;
+   }
+.subtitle{
+    font-size: 18px;
+}
+.currentPrice{
+    font-size: 36px;
+}
+.oldPrice{
+    font-size: 18px;
+}
+/*  /productCard */
+h1 {
+    padding-top: 50px;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 110%;
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: 24px;
+    margin-top: 56px;
+    /* padding-right: 16px; */
+}
+h3{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+}
+}
+
+
+@media  (max-width: 360px) {
+
+    h3{
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 110%;
+    }
+    .cardsList {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+    }
+ 
+    /*  Product Card */
+.discountPercent{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: var(--white);
+}
+.subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--black);
+}
+.currentPrice{
+
+    font-size: 36px;
+  
+}
+.oldPrice{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-decoration: line-through;
+    color: var(--grey);
+}
+/*  /productCard */
+}

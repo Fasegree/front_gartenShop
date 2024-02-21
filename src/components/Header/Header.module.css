@@ -1,0 +1,132 @@
+/* :root{
+    --green: #393;
+    --light-grey: #F1F3F4;
+    --white: #fff;
+    --txt-black: #282828;
+    --txt-grey: #8B8B8B;
+    --txt-white: #fff;
+    --grey-divider: #DDD;
+    --black: #282828;
+    
+} */
+
+
+.header {
+    display: flex;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    justify-content: space-between;
+    align-items: center;
+    height: 128px;
+    color: var(--txt-black);
+}
+.logo {
+    /* width: 70px; */
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+.nav  li {
+    font-size: 20px;
+    line-height: 130%;
+}
+.nav  li:hover {
+    cursor: pointer;
+    color: var( --green);
+
+}
+.cartArea {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+}
+.cart {
+    cursor: pointer;
+    position: relative;
+    /* width: 48px; */
+    aspect-ratio: 1;
+}
+.countInCart {
+    top: 7px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    width: 26px;
+    aspect-ratio: 1;
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 50%;
+    font-weight: 600;
+
+}
+
+.burgerMenu {
+    /* display: none; */
+}
+/* @media (max-width: 1400px) {
+
+} */
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+        height: 110px;
+    }
+    .logo {
+         width: 44px;
+         /* margin-right: 20px; */
+    }
+    .cart{
+        /* margin-right: 20px; */
+    }
+    .nav {
+        gap: 20px;
+    }
+    .navMenu {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 68px;
+        padding: 0;
+    }
+    .logo img{
+        width: 44px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .cartArea{
+        gap: 20px;
+    }
+    .cart img {
+        width: 32px;
+    }
+   
+   
+    .cart img {
+        width: 32px;
+        
+    }
+    .countInCart {
+        width: 17px;
+        font-size: 8px;
+    }
+}
+@media (max-width: 360px) {
+
+}
+

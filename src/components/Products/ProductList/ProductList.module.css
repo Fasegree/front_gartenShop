@@ -1,0 +1,15 @@
+.cardsList {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 40px; */
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.titleCategory{
+    /* margin-top: 40px; */
+}
+.productsWrapper{
+    display: flex;
+}
+

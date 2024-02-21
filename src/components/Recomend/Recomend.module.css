@@ -1,0 +1,36 @@
+.content {
+    background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)),url(./media/recomend.jpg) ;
+    background-position: center;
+    background-size: cover;
+    
+    padding-bottom: 210px;
+    background-repeat: no-repeat;
+    /* background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(<path-to-image>), lightgray 0px -230.586px / 100% 160.195% no-repeat; */
+    
+}
+.content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media (max-width: 1000px) {
+    .content {      
+        padding-bottom: 120px;
+    }
+}
+@media (max-width: 768px) {
+    .content {      
+        padding-bottom: 326px;
+    }
+}
+@media (max-width: 480px) {
+    .content {      
+        padding-bottom: 215px;
+    }
+}
+@media (max-width: 360px) {
+    .content {      
+        padding-bottom: 251px;
+    }
+}

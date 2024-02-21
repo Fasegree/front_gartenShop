@@ -1,0 +1,145 @@
+/* .form {
+    background: linear-gradient(261deg, #0B710B 32.63%, #393 98.96%);
+    border-radius: var(--radius-big, 12px);
+    text-align: center;
+    margin-top: 80px;
+}
+.form > h2{
+    color: var(--txt-white);
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+.content {
+    display: flex;
+    gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+} */
+/* .content > img {
+} */
+/* .inputs {
+    padding-bottom: 32px;
+} */
+/* .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    width: 100%;
+} */
+/* .content > div > input {
+padding: 16px 32px;
+border-radius: 6px;
+border:  1px solid var(--white);
+font-size: 20px;
+font-weight: 500;
+line-height: 130%;
+color: var(--txt-white, #fff);
+background-color: transparent;
+}
+.content > div > input::placeholder {
+    color: var(--txt-white);
+} */
+/*================== */
+.dicountOrderForm{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(261deg, #0B710B 32.63%, #393 98.96%);
+    border-radius: var(--radius-big, 12px);
+    text-align: center;
+    margin-top: 80px; 
+
+}
+.dicountOrderForm > div {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    /* gap: 32px; */
+}
+.dicountOrderForm h2{
+    color: var(--txt-white);
+    /* padding-top: 32px; */
+    /* padding-bottom: 24px; */
+}
+.dicountOrderForm{
+    /* max-width: 516px; */
+}
+.handsImg {
+ 
+    width: 100%;
+    position: relative;
+    /* border: 5px solid red; */
+
+}
+.handsImg img {
+    bottom: 0;
+    /* margin-left: 32px; */
+    position: absolute;
+    max-width: 100%;
+    display: block;
+    /* add */
+    width: 748px;
+    height: 360px;
+    object-fit: cover;
+    /* fixed position for right side */
+    object-position: right;
+}
+.form{
+
+    margin-bottom: 32px;
+    margin-right: 32px;
+ 
+   
+}
+
+
+@media (max-width:1000px) {
+    .dicountOrderForm > div {
+        grid-template-columns: 50% 50%;
+        /* gap: 32px; */
+    }
+}
+
+@media (max-width: 480px) {
+    .dicountOrderForm > div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .handsImg img {
+        position: relative;
+        object-position: center;
+        height: 100%;
+    }
+    .handsImg{
+        position: block;
+       
+       
+    }
+    .img_container{
+        position: relative;
+    }
+    .form {
+        margin-right: 0;
+        margin-bottom: 0px;
+        width: 90%;
+
+    }
+    
+}
+@media (max-width: 360px) {
+    .dicountOrderForm > div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .handsImg img {
+        position: relative;
+        object-position: center;
+        height: 210px;
+    }
+}
+

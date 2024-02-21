@@ -1,0 +1,110 @@
+.btn {
+    background-color: rgba(51, 153, 51, 1);
+    color: var(--white);
+    border:1px solid transparent;
+    height: 100%;
+    padding: 16px 9px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+    transition: .4s;
+    text-wrap: nowrap;
+}
+
+.orderDefault{
+    padding-top: 32px;
+    background-color: rgba(51, 153, 51, 1);
+    color: var(--white);
+    border:1px solid transparent;
+    height: 100%;
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+    transition: .4s;
+}
+.orderDefault:hover{
+    background: var(--black);
+    border:1px solid var(--grey);
+}
+.orderGetted{
+    background-color: rgba(51, 153, 51, 1);
+    color: var(--white);
+    border:1px solid transparent;
+    height: 100%;
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+    transition: .4s;
+}
+.orderGetted:hover{
+    opacity: .5;
+    background: var(--white);
+    color: var(--txt-black);
+}
+.homePageBanner {
+    background-color: rgba(51, 153, 51, 1);
+    color: var(--white);
+    border:1px solid transparent;
+    padding: 16px 56px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+    transition: .4s;
+}
+.btnAdded {
+    background-color: white;
+    color: #282828;
+    height: 100%;
+    width: 90%;
+    padding: 16px 32px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 5;
+    border: 1px solid var(--light-grey);
+}
+
+.onclick{
+    background: var(--white);
+    color: var(--txt-black);
+}
+
+.btn:hover {
+    
+    background: var(--black);
+    border:1px solid var(--grey);
+
+}
+.btn:active {
+    opacity: .5;
+    background: var(--white);
+    color: var(--txt-black);
+    
+}
+.width90per {
+    width: 90%;
+}
+.width100per {
+    width: 100%;
+}
+.maxWidth313 {
+    max-width: 313px;
+}

@@ -1,0 +1,90 @@
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import ProductItem from "../ProductItem"
+import { Link, useParams } from "react-router-dom"
+
+import s from './ProductList.module.css'
+import FilterPanel from "../../FilterPanel"
+import { fetchProductsAll } from "../../../asyncActions/products"
+import { isPage } from "../../../App"
+
+export default function ProductList({type}){
+
+    let { category, products } = useSelector((store) => store.products);
+ let currentProducts = []
+    const dispatch = useDispatch()
+    const {id} = useParams();
+   
+    // console.log(type);
+    
+    useEffect(() => {
+        // console.log("all "+ type);
+        switch (type) {
+            case isPage.all:
+                dispatch(fetchProductsAll(type))
+                
+                break;
+            case isPage.sale:
+                dispatch(fetchProductsAll(type))
+          
+                break;
+            case isPage.home:
+                dispatch(fetchProductsAll(type));
+          
+                break;
+       
+            default:
+                break;
+        }
+    }, [type, id, dispatch])
+
+    let renderArray =[]
+    function renderProduct(products){
+        console.log(products);
+        if(products?.from!==0){
+            renderArray = products?.filter(el => {
+                if(el.discont_price && el.discont_price > products.from){
+                    return el
+                }    
+            })
+        }
+        if(products?.to!== Infinity){
+            renderArray = renderArray?.filter(el => {
+                if(el.discont_price && el.discont_price < products.to){
+                    return el
+                }    
+            })
+        }
+        if(products?.isSale){
+            renderArray = renderArray?.filter(el => el.discont_price)
+        }
+        return renderArray
+           
+    }
+ renderArray = renderProduct(products)
+ console.log(renderArray);
+    return (
+        <div className='container'>            
+            <h2>{category}</h2>
+            <FilterPanel/>
+            <div className="cardsList">
+            
+            {renderArray?.map(prod => {
+                return (
+                    <div  key={prod.id} >
+
+                    <Link to={`/categories/${prod.categoryId}/${prod.id}`}>
+                    <div key={prod.id}>
+                        <ProductItem prod={prod} />
+                    </div>
+                    </Link>
+                  </div>
+                    
+                )
+            })}
+            </div>
+        </div>
+    )
+}
+
+

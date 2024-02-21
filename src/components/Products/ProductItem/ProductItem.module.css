@@ -1,0 +1,118 @@
+.addProductToCartDiv{
+    
+    font-size: 32px;
+    font-weight: 700;
+}
+.productCard {
+    /* height: 422px; */
+    /* width: 316px; */
+    width: 100%;
+    position: relative;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+  
+    object-fit: cover;
+    overflow: hidden;
+}
+.discount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    right: 16px;
+    top: 16px;
+    width: 63px;
+    height: 34px;
+    background-color: green;
+    z-index: 1;
+}
+.imageBtn{
+    position: relative;
+    overflow: hidden;
+
+}
+.productsImg {
+    height: 284px;
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    background-size: cover;
+    background-position: center;
+   
+}
+.btnAdd {
+    
+    position: absolute;
+    bottom: -60px;
+    left: 16px;
+    transition: .3s linear;
+    width: 100%;
+ 
+}
+.productCard:hover .btnAdd {
+    bottom: 16px;
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+}
+.cardTitle {
+    /* max-width: 200px;
+    white-space: nowrap;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    margin: 20px 32px 16px;
+    overflow: hidden; */
+    
+    font-size: 20px;
+    margin: 20px 32px 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.cardPrice{
+margin: 0 20px 20px;
+display: flex;
+align-items: baseline;
+gap: 16px;
+}
+.currentPrice{
+    color: #282828;
+    font-size: 40px;
+    font-weight: 600;
+    
+}
+.oldPrice{
+    font-size: 20px;
+    text-decoration: line-through;
+    color: rgba(139, 139, 139, 1);
+
+}
+/* =========================================================================================== */
+@media (max-width: 1000px) {
+    .cardTitle {
+        margin: 20px 20px 12px;
+       
+    }
+    .cardPrice{
+        margin: 0 20px 20px;
+   
+        gap: 12px;
+        }
+    .currentPrice{        
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .oldPrice{
+        font-size: 20px;
+        text-decoration: line-through;
+        color: rgba(139, 139, 139, 1);
+    
+    }
+    .productCard{
+
+    }
+}

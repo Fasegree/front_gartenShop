@@ -1,0 +1,85 @@
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modalContent {
+    /* display: flex;
+    flex-direction: column; */
+    max-width: 548px;
+    padding-right: 92px;
+    background: var(--green);
+    /* padding: 20px; */
+    border-radius: 12px;
+    position: relative;
+    /* margin: 20px; */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.congratulations{
+    color: var(--txt-white);
+    margin-bottom: 24px;
+
+}
+.modalTxt {
+    max-width: 548px;
+    padding: 32px;
+}
+.modalTxt p{
+    padding-bottom: 20px;
+    color: var(--txt-white);
+    
+}
+
+.closeButton {
+    background-color: var( --green);
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+@media (max-width: 1000px) {
+    .childrenTxt {
+        display: flex;
+        
+    }
+    .emptyTxtModal{
+
+        width: 32px;
+        height: 100px;
+        border: 1px solid red;
+    }
+}
+@media (max-width: 480px) {
+    .closeButton {
+        top: 24px;
+        right: 20px;
+    }
+    .modalContent {
+        padding: 24px 20px;
+    }
+  
+    .modalContent h3{
+        margin-bottom: 0px;
+
+    }
+    .modalContent p{
+        font-size: 18px;
+    }
+}
+@media (max-width: 360px) {
+    .modalContent {
+        padding: 80px 20px 76px 20px;
+    }
+}
