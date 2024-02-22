@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp } from 'react-icons/fa';
+// import { FaArrowCircleUp } from 'react-icons/fa';
 import styles from './Button.module.css';
 
 const ScrollToTopButton = () => {
@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
       className={`${styles.scrollToTopButton} ${isVisible ? styles.showButton : ''}`}
       onClick={scrollToTop}
     >
-      <FaArrowCircleUp />
+      {/* <FaArrowCircleUp /> */}
     </button>
   );
 };
