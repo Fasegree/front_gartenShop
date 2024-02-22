@@ -74,11 +74,11 @@
 
 } */
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .header {
         padding: 0 20px;
         height: 110px;
@@ -99,7 +99,7 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .header {
         height: 68px;
         padding: 0;
@@ -126,7 +126,7 @@
         font-size: 8px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 
 }
 

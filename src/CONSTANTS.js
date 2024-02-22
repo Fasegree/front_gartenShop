@@ -5,6 +5,7 @@ export const isPage = {
     category: 'category',
     cart: 'cart',
     productPage: 'productPage',
+    prodOfCategory: 'prodOfCategory'
   }
 
   export const btnTitles = {

@@ -1,10 +1,10 @@
-import {combineReducers, configureStore } from '@reduxjs/toolkit'
+import {applyMiddleware, combineReducers, configureStore, createStore } from '@reduxjs/toolkit'
 
 
 import { productsReducer } from './productsReducer'
 import { cartReducer } from './cartReducer'
 
-import {thunk} from 'redux-thunk'
+import { thunk } from 'redux-thunk'
 import { persistReducer, persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import categoriesSlice from './categoriesSlice'
@@ -17,11 +17,11 @@ import { categoriesReducer } from './categoriesReducer'
 
 const initialState = []
 
-const persingConfig = {
+const persistingConfig = {
     key: 'localStorage',
     storage,
     whitelist: ['cart'],
-    blacklist: ['_persist']
+    // blacklist: ['_persist']
 
 }
 
@@ -36,14 +36,7 @@ const rootReduser = combineReducers({
 
 })
 
-export const store = configureStore({
-    reducer: rootReduser,
-    // middleware: [thunk],
-})
 
-// const persistedReducer = persistReducer(persingConfig, rootReduser)
-
-
+const persistedReducer = persistReducer(persistingConfig, rootReduser)
+export const store = createStore(persistedReducer, applyMiddleware(thunk))
 export const persistor = persistStore(store)
-// export const store = createStore(persistedReducer, applyMiddleware(thunk))
-//Reducer => category, OneProd, Cart, 

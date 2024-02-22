@@ -3,7 +3,18 @@
     bottom: 60px;
     right: 20px;
     border-radius: 50%;
+    width: 60px;
     aspect-ratio: 1;
     z-index: 9;
     cursor: pointer;
+    background-color: #ffffff00;
+    opacity: .7;
+    transition: .3s ease-in;
+    backdrop-filter: blur(15px);
+}
+.scrollToTopButton:hover {
+    background-color: var(--green);
+    opacity: .9;
+    filter: blur(0px);
+    scale: 1.1;
 }

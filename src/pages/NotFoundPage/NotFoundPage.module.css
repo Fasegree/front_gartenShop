@@ -4,15 +4,30 @@
     align-items: center;
     justify-content: center;
 }
-
+.container h2 {
+    text-align: center;
+}
 .img404 {
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.img404 img {
+    width: 100%;
+   
 }
 .text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.text p {
+    text-align: center;
+}
+.text:last-child {
+   margin-bottom: 322px;
 }
 

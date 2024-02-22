@@ -4,7 +4,7 @@ import s from './Modal.module.css';
 import close from './media/closeWhite.png'
 
 const Modal = ({ onClose, modalTxt }) => {
-    console.log(modalTxt);
+    // console.log(modalTxt);
     return (
         <div className={s.modalOverlay}>
             <div className={s.modalContent}>
@@ -21,7 +21,7 @@ const Modal = ({ onClose, modalTxt }) => {
                     {/* <p>Your order has been successfully placed on the website.</p>
                     <p>A manager will contact you shortly to confirm your order.</p> */}
                 </div>
-                    {/* {children} */}
+                 
                 
                 </div>
             </div>

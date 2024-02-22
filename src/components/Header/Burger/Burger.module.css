@@ -97,7 +97,7 @@
   border-bottom: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .burgermenu {
     display: block;
   }
@@ -109,7 +109,7 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   
   .burgericon {
     width: 32px;
@@ -125,6 +125,6 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 
 }

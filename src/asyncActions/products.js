@@ -6,7 +6,7 @@ import { asyncProductByIdAction, asyncProductsAllAction, asyncProductsOfCategory
 function getDefaultState(arr) {
         if(Array.isArray(arr)) {
             return {category: '', 
-                    products: arr.map(el => ({...el, isShow: true, count: 1, currentPrice: el.discont_price?  el.discont_price : el.price})),                      
+                    products: arr.map(el => ({...el, isShow: true, count: 1, currentPrice: el.discont_price ?  el.discont_price : el.price})),                      
                     from: 0,
                     to: Infinity,
                     isSale: false,
@@ -14,7 +14,7 @@ function getDefaultState(arr) {
                    }
         } else {
             return {category: arr.category.title, 
-                    products: arr.data.map(el => ({...el, isShow: true, count: 1, currentPrice: el.discont_price?  el.discont_price : el.price})),     
+                    products: arr.data.map(el => ({...el, isShow: true, count: 1, currentPrice: el.discont_price ?  el.discont_price : el.price})),     
                     from: 0,
                     to: Infinity,
                     isSale: false,
@@ -57,7 +57,6 @@ export function fetchProductsAll(type){
 // product list
 export function fetchProductsListByCategory(category){
     return function(dispatch){
-        console.log(category+ '    is category');
         try{
             fetch(ROOT_URL + '/categories/' + category)
             
@@ -91,7 +90,6 @@ export function fetchCatigoriesList(type){
             fetch(ROOT_URL + '/categories/all')
             .then(res => res.json())
             .then(data => {
-                console.log(type + "type is");
                 if(type === isPage.home){
                     
                     (dispatch(asyncCategoriesListAction(data.slice(0, 4))))

@@ -80,24 +80,24 @@
 } */
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
     .orderContainer{
         gap: 20px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .orderContainer{
         grid-template-columns: repeat(1, 1fr);
        
         
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .modalTxt{
         padding: 0;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .modalTxt {
         max-width: 280px;
     }

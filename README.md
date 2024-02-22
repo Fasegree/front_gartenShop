@@ -45,6 +45,11 @@ index.js =>
 npm install --save react-breadcrumbs //error
 
 npm install --save react-breadcrumbs@1.6.x
+
+====================================
+Установка иконок
+
+npm install react-icons --save
 ======================================= 
 ============= Установка бекенд
 =======================================
@@ -141,3 +146,6 @@ rest:
 cart => btnOrder(logic form)
 LS, Adaptive
 useLocation() opredelenie navigacii path navMenu active Menu green 
+
+20.02/24
+logic page: products of category.

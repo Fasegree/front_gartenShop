@@ -11,14 +11,9 @@ export default function CategoriesList({ type }) {
   const { id } = useParams();
 useEffect(() => {
   window.scrollTo(0, 0);
-
             dispatch(fetchCatigoriesList(type))
-           
-
   }, [id, type, dispatch]);
 
-
-//===========
   return (
    <div >
     {type!==isPage.home && <h2 className='wrapper'>Categories</h2>}
@@ -28,8 +23,8 @@ useEffect(() => {
               
                 
              
-                return <div>
-                         <Link key={cat.id} to={`/categories/${cat.id}`}>
+                return <div key={cat.id}>
+                         <Link to={`/categories/${cat.id}`}>
                         {/* <div  style={{backgroundImage: `url('${ROOT_URL+cat.image}')`}} className={s.categoryImg} key={cat.id}> */}
                         
                           <img className={s.categoryImg} src={ROOT_URL+cat.image} alt="category" />

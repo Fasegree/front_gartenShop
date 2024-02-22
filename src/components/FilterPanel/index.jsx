@@ -3,15 +3,11 @@ import s from './FilterPanel.module.css'
 import { isPage } from '../../App';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterAllAction, searchTitleAction, sortByAction } from '../../store/productsReducer';
-import LiveSearch from '../LiveSearch/LiveSearch';
+import LiveSearch from './LiveSearch/LiveSearch';
 
 
 
 export default function FilterPanel({type, id}) {
-    // 1 Задание 
-// Реализовать форму, которая будет включать в себе 2 инпута
-// по событию change форма должна в консоль вернуть объект с значениями 2 инпутов
-// name = from, placeholder = from
 const dispatch = useDispatch()
 const products = useSelector(store => store.products);
 const handleOnChange = (e) => { 
@@ -23,26 +19,20 @@ const handleOnChange = (e) => {
 }
 const checkIsSale = (e) => {
     dispatch(filterAllAction({...products, isSale: e.target.checked }))
-    // console.log( e.target.checked);
 }
  
 const handleSort = (e) => {
-    // console.log(e.target.value);
     dispatch(sortByAction({...products, sortBy: e.target.value }))
 }
 
 
   return (
-  <div>
-    <div className={s.filterPanel}>
-            {/* <LiveSearch products={products}/> */}
+  <div className='wrapper'>
+    <div className={`${s.filterPanel }`}>
+            <LiveSearch products={products}/>
             <form onChange={handleOnChange}>
-                {/* <div  className={s.price_filter}>
-                    <span>Title</span>
-                    <input name="title" placeholder="Title" />
-                </div> */}
             <div className={s.price_filter}>
-                <span>Price</span>
+                <p>Price</p>
                 <input name="from" placeholder="from" />
                 <input name="to" placeholder="to" />
             </div>
@@ -60,7 +50,7 @@ const handleSort = (e) => {
             }
 
             <div className={s.sorted_filter}>
-            <span>Sorted</span>
+            <p>Sorted</p>
             <select onChange={handleSort} className={s.select_drop_down} name='filter_by' >
                 <option value="default">by default</option>
                 <option value="newest">newest</option>

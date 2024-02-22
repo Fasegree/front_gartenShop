@@ -57,6 +57,8 @@
 .cardInfo {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
 }
 .cardTitle {
     /* max-width: 200px;
@@ -92,7 +94,7 @@ gap: 16px;
 
 }
 /* =========================================================================================== */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .cardTitle {
         margin: 20px 20px 12px;
        

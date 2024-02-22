@@ -3,8 +3,12 @@
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    margin-bottom: 40px;
   }
-  
+  .price_filter{
+    display: flex;
+    align-items: center;
+  }
   .price_filter input{
     max-width: 112px;
     height: 100%;    
@@ -48,6 +52,10 @@
       font-size:23px;
       color: var(--green, #393);
     }
+    .sorted_filter {
+      display: flex;
+      align-items: center;
+    }
   .select_drop_down{
    
       border-radius: 6px;
@@ -81,67 +89,16 @@
       text-indent: 8px;
       background-color: var(--white, #fff);
    }
-  
-   /* ==================================================== */
-   /* .check_Box{
-      width: 36px;
-      height: 36px;
-    }
+
+   @media (max-width: 1000px) {
     
-    .check_Box {
-      margin-left: 12px;
-      accent-color: rgb(53, 168, 53);
-    }
+   }
+  @media (max-width: 768px) {
     
-    
-    .sortAllContainer {
-  
-     gap: 40px;
-     display: flex;   
-  
-     margin-left: 40px;
-  
-     font-size: 20px;
-     font-weight: 600;
-     margin-bottom: 40px;
-     height: 36px;
-  
+  }
+  @media (max-width: 480px) {
+    .filterPanel {
+      gap: 10px;
+      margin-bottom: 20px;
     }
-    
-    .sorted_filter {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: nowrap;
-    }
-    
-    .price_filter input {
-      width: 112px;
-      height: 36px;
-      margin-left: 16px;
-      border-radius: 6px;
-    }
-    
-    .discount_filter {
-      display: flex;
-      align-items: center;
-  
-    }
-    .labelCheck {
-      display: flex;
-      align-items: center;
-    }
-    
-    .select_drop_down {
-      border-radius: 6px;
-      height: 36px;
-      margin-left: 16px;
-      font-size: 16px;
-      text-indent: 8px;
-      background-color: white;
-    }
-    
-    .sortAllContainer input::placeholder {
-      font-size: 16px;
-      text-indent: 8px;
-    } */
+  }

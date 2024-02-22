@@ -12,11 +12,11 @@ import { btnTitles } from "../../CONSTANTS"
 
 export default function CartPage() {
     const productsCart = useSelector(store => store.cart)
-    const {isShow} = useSelector(store => store.isAdd)
-    const dispatch = useDispatch()
+    const {isShowModal} = useSelector(store => store.isAdd)
+    // const dispatch = useDispatch()
     useEffect(() => {
       window.scrollTo(0, 0)
-    },[ getTotalPrice()===0, isShow ])
+    },[ getTotalPrice()===0, isShowModal ])
 
     function getTotalPrice() {
      
@@ -33,7 +33,7 @@ export default function CartPage() {
   }
 
   const [isModalVisible, setModalVisible] = useState(false);
-//   const item = useSelector((store) => store.basket);
+
 
 
   const handleOrderClick = () => {
@@ -41,7 +41,7 @@ export default function CartPage() {
       setModalVisible(true);
   }
   const modalTxt = ['Your order has been successfully placed on the website.', 'A manager will contact you shortly to confirm your order.']
-console.log(modalTxt);
+// console.log(modalTxt);
       return (
           <div className="container">
             {isModalVisible && (

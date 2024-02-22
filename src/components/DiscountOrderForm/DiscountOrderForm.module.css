@@ -92,14 +92,14 @@ background-color: transparent;
 }
 
 
-@media (max-width:1000px) {
+@media (max-width:1440px) {
     .dicountOrderForm > div {
         grid-template-columns: 50% 50%;
         /* gap: 32px; */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .dicountOrderForm > div {
         display: flex;
         flex-direction: column-reverse;
@@ -128,7 +128,7 @@ background-color: transparent;
     }
     
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .dicountOrderForm > div {
         display: flex;
         flex-direction: column-reverse;

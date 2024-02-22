@@ -6,7 +6,6 @@ import ShowDescription from '../../ShowDescription';
 import { isPage } from '../../../CONSTANTS';
 
 export default function GridOneProduct({ prod }) {
-  console.log(prod);
 
   const { id, title, description, price, image, count, discont_price } = prod
   return (
@@ -19,6 +18,8 @@ export default function GridOneProduct({ prod }) {
       </div>
       <div className={s.img}>
         <img src={`${ROOT_URL}/${image}`} alt="" />
+        {discont_price && <div className={s.discountImg}>{`-${Math.round(100 - discont_price * 100 / price)}%`}</div>}
+
       </div>
       <div className={s.control}>
 

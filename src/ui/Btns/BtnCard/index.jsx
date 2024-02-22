@@ -5,7 +5,7 @@ import { isPage } from "../../../App";
 import { btnTitles } from "../../../CONSTANTS";
 
 
-export default function ButtonCard({action, title, btnLink, type}) {
+export default function ButtonCard({action, title, btnLink ='', type}) {
   const [newTitle, setNewTitle] = useState(title);
  
   function changeStyle(e){   

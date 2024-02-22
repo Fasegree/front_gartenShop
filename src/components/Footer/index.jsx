@@ -42,11 +42,7 @@ export default function Footer(){
                     <a href="https://www.maps.ie/population/">Calculate population in area</a>
                 </iframe>
           
-        </footer>
-        {/* <div>
-            <p></p>
-            <p></p>
-        </div> */}
+        </footer>       
         </div>
     )
 }

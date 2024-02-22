@@ -23,7 +23,7 @@ export function decr({  product,
                         dispatch
                     }) {
     if (product.count > 1 && page == isPage.productPage) {
-        console.log(isPage.productPage);
+        // console.log(isPage.productPage);
         dispatch(incrControlCountAction({ count: -1 }))
     } else if(page === isPage.cart){
         dispatch(removeFromCart(product))
@@ -35,7 +35,7 @@ export function addPayload({    product,
                                 dispatch
                             }) {
     // const payload =  {...product, count: product.count}
-    console.log(product);
+    // console.log(product);
     dispatch(addManyToCartAction(product))
 }
 

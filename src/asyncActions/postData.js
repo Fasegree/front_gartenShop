@@ -10,7 +10,7 @@ export default async function postData(data, isHomePage, action) {
   
         if (response.ok) {
           action && action();
-          alert('Ваш купон успешно отправлен!');
+          // alert('Ваш купон успешно отправлен!');
           console.log(response);
           console.log(data);
           return response;

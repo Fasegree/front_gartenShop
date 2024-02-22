@@ -42,9 +42,11 @@ gap: 16px;
 .cardInfo{ 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding-top: 32px;
     padding-right: 32px;
     margin-left: 0;
+    min-height: 160px;
 }
 .title {
     font-weight: 500;
@@ -119,7 +121,7 @@ gap: 16px;
     
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1440px) {
         .cardsWrapper{
             display: flex;
             flex-direction: column;
@@ -137,17 +139,17 @@ gap: 16px;
             }
            
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
         .controllAll {   
             flex-direction: row;
             }
     }
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         .controllAll {   
             flex-direction: column;
             }
     }
-    @media (max-width: 360px) {
+    @media (max-width: 480px) {
         .img{
             width: 200px;
         }

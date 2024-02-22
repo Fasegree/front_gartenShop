@@ -117,14 +117,14 @@
     background-color: var(--black, #282828);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768x) {
     .discountInput input {
         /* width: 400px;
         padding-left: 32ppx;
@@ -140,7 +140,7 @@
         /* padding-left: 30px; */
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .discountInput input {
  
         font-size: 18px;

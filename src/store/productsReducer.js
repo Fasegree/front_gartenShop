@@ -94,10 +94,10 @@ function filterAll_(el, from, to, isSale) {
     
 }
 //============================================ OLD LOGICK CHECK TITLE
-function checkTitle(el, searchTitle){
-    console.log('wqe');
-return el.title.toLowerCase().includes(searchTitle.toLowerCase()) ? {...el, isShow: true } : {...el, isShow: false };
-}
+// function checkTitle(el, searchTitle){
+  
+// return el.title.toLowerCase().includes(searchTitle.toLowerCase()) ? {...el, isShow: true } : {...el, isShow: false };
+// }
 
 
 //============================================NEW FILTER BY =============================================
@@ -126,37 +126,29 @@ export const productsReducer = (state = defaultState, action) => {
         case PRODUCTS_SALE:
             return { ...action.payload, category: 'Discounted items' };
         case ASYNC_PRODUCT_BY_ID:
-            console.log({...action.payload });
             return {...action.payload};
        
-//============================================ OLD FILTER BY =============================================
+//============================================ NEW FILTER BY =============================================
         case FILTER_ALL:
             
                 let filterAll = action.payload.products.map(el => {
-                    // el = getFilterFrom(el, action.payload.from);
-                    // el = getFilterTo(el, action.payload.to);
-                    // el = getSale(el, action.payload.isSale);
-                    // console.log(el, action.payload.from, action.payload.to, action.payload.isSale);
-                    // el = filterAll_(el, action.payload.from, action.payload.to, action.payload.isSale)
                     return filterAllWithTitle(el, action.payload.from, action.payload.to, action.payload.isSale, action.payload.searchTitle);
                 })
             return {...action.payload, products: filterAll };
 //============================================ OLD SEARCH TITLE =============================================
-case SEARCH_TITLE: 
-    // let {action.payload.from, to, isSale} = state;
-    let from = action.payload.from;
-    let to = action.payload.to;
-    let isSale = action.payload.isSale;
-    // console.log(from, to, isSale, action.payload);
-    let filteredAll = action.payload.products.map(el => {
-        const isPriceInRange = isSale ? el.discont_price && el.discont_price > from && el.discont_price < to : el.price > from && el.price < to;
-        if(action.payload.searchTitle === ''){}
-        const isTitleIncluded = el.title.toLowerCase().includes(action.payload.searchTitle.toLowerCase());
-        const isShow = isPriceInRange && isTitleIncluded;
-        return { ...el, isShow };
-    });
-    return { ...action.payload, products: filteredAll };
-break;
+// case SEARCH_TITLE: 
+//     let from = action.payload.from;
+//     let to = action.payload.to;
+//     let isSale = action.payload.isSale;
+//     let filteredAll = action.payload.products.map(el => {
+//         const isPriceInRange = isSale ? el.discont_price && el.discont_price > from && el.discont_price < to : el.price > from && el.price < to;
+//         if(action.payload.searchTitle === ''){}
+//         const isTitleIncluded = el.title.toLowerCase().includes(action.payload.searchTitle.toLowerCase());
+//         const isShow = isPriceInRange && isTitleIncluded;
+//         return { ...el, isShow };
+//     });
+//     return { ...action.payload, products: filteredAll };
+// break;
 
 //============================================ SORT BY =============================================
             
@@ -181,18 +173,18 @@ break;
             return state    
    
 //========================== OLD SORT ============================================
-        case FILTER_BY_DEFAULT:
-            const filterDefault = action.payload.products.slice().sort((a, b) => a.id - b.id);
-            return { ...action.payload, products: filterDefault };
-        case FILTER_BY_NEWEST:
-            const filterNewest = action.payload.products.slice().sort((a, b) => b.updatedAt - a.updatedAt);
-            return { ...action.payload, products: filterNewest };
-        case FILTER_HIGH_LOW:
-            const filterHighLow = action.payload.products.map(el => ({...el, curent_price: el.discont_price ?  el.discont_price : el.price}) ).sort((a, b) => b.curent_price - a.curent_price);
-            return { ...action.payload, products: filterHighLow };
-        case FILTER_LOW_HIGH:
-            const filterLowHigh = action.payload.products.map(el => ({...el, curent_price: el.discont_price ?  el.discont_price : el.price}) ).sort((a, b) => a.curent_price - b.curent_price);
-            return { ...action.payload, products: filterLowHigh };
+        // case FILTER_BY_DEFAULT:
+        //     const filterDefault = action.payload.products.slice().sort((a, b) => a.id - b.id);
+        //     return { ...action.payload, products: filterDefault };
+        // case FILTER_BY_NEWEST:
+        //     const filterNewest = action.payload.products.slice().sort((a, b) => b.updatedAt - a.updatedAt);
+        //     return { ...action.payload, products: filterNewest };
+        // case FILTER_HIGH_LOW:
+        //     const filterHighLow = action.payload.products.map(el => ({...el, curent_price: el.discont_price ?  el.discont_price : el.price}) ).sort((a, b) => b.curent_price - a.curent_price);
+        //     return { ...action.payload, products: filterHighLow };
+        // case FILTER_LOW_HIGH:
+        //     const filterLowHigh = action.payload.products.map(el => ({...el, curent_price: el.discont_price ?  el.discont_price : el.price}) ).sort((a, b) => a.curent_price - b.curent_price);
+        //     return { ...action.payload, products: filterLowHigh };
 //============================================ =============================================         
 //============================================ INCREMENT CONTROL COUNT =============================================
         case INCR_CONTROL_COUNT:
@@ -215,8 +207,6 @@ export const removeProductByIdAction = (payload) => ({ type: REMOVE_PRODUCT_BY_I
 
 
 export const sortByAction = (payload) => ({ type: SORT_BY, payload });
-
-
 
 export const incrControlCountAction = (payload) => ({ type: INCR_CONTROL_COUNT, payload });
 

@@ -27,20 +27,20 @@ iframe {
     margin-bottom: 80px;
 }
 
+@media (max-width: 1440px) {
+
+}
 @media (max-width: 1000px) {
 
 }
 @media (max-width: 768px) {
-
-}
-@media (max-width: 586px) {
     .content {
         display: grid;
         grid-template-columns:  1fr;
         grid-gap: 12px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
  
     .content div{
         font-weight: 600;
