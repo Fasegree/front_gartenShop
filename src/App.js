@@ -29,9 +29,9 @@ export const isPage = {
 }
 function App() {
   const isAddToCart = useSelector((state) => state.isAdd) ?? false;
-  useEffect(() => {
+  // useEffect(() => {
 
-  },[isAddToCart])
+  // },[isAddToCart])
 
 console.log(isAddToCart);
 
@@ -39,8 +39,8 @@ console.log(isAddToCart);
 
   return (
     <div className='app'>
-      {/* <ScrollToTopButton/> */}
-      {/* {<div className={`addProductToCartDiv ${isAddToCart && "show"}`}>ADD TO CART</div>} */}
+      <ScrollToTopButton/>
+      {<div className={`addProductToCartDiv ${isAddToCart && "show"}`}>ADD TO CART</div>}
       {/* <Modal /> */}
       <Header/>
       <Routes>

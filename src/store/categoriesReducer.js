@@ -13,7 +13,7 @@ export const categoriesReducer = ( state = defaultState, action ) => {
         case ASYNC_CATEGORIES_LIST:
             return action.payload;
         default:
-            return [...state];
+            return state;
     }
 }
 

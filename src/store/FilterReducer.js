@@ -40,7 +40,7 @@ export const filterReducer = (state = defaultState, action) => {
                     console.error("Payload products is not an array:", action.payload.products);
                     return state;
                 }
-            // return  action.payload.slice().sort((a, b) => a.price - b.price) ;
+            
         default:
             return state;
     }

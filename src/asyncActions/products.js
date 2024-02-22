@@ -64,7 +64,7 @@ export function fetchProductsListByCategory(category){
             .then(data => dispatch(asyncProductsOfCategoryAction(getDefaultState(data))))
             console.log(' async fetch..... ok');
         }catch(err){
-            console.log('erroer is');
+            console.log('error is');
         }
     }
 }
