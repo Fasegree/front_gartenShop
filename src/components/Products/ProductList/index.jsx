@@ -6,6 +6,7 @@ import s from './ProductList.module.css';
 import FilterPanel from "../../FilterPanel";
 import { fetchProductsAll, fetchProductsListByCategory } from "../../../asyncActions/products";
 import { isPage } from "../../../App";
+import PopUpAddedProd from "../../PopUpAddedProd";
 
 
 export default function ProductList({type}) {
@@ -34,12 +35,15 @@ export default function ProductList({type}) {
                 <div className="cardsList wrapper">
 
                 {products?.length > 0 && products.map(prod => (
-
-                    prod?.isShow && 
                        
+                    prod?.isShow && 
+                       <div>
+
                             <Link  key={prod.id} to={`/categories/${category}/${prod.id}`}>
                                 <ProductItem prod={prod} />
                             </Link>
+                                {/* <PopUpAddedProd prod={prod}/> */}
+                       </div>
                        
                 ))}
                 </div>

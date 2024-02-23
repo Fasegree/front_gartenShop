@@ -3,17 +3,20 @@ import s from "./BtnCard.module.css";
 import { Link } from "react-router-dom";
 import { isPage } from "../../../App";
 import { btnTitles } from "../../../CONSTANTS";
+import { useDispatch } from "react-redux";
+import { isAddToCartAction } from "../../../store/isAddReducer";
 
 
 export default function ButtonCard({action, title, btnLink ='', type}) {
   const [newTitle, setNewTitle] = useState(title);
- 
+ const dispatch = useDispatch();
   function changeStyle(e){   
     !btnLink && e.preventDefault();
     action && action();
     let oldTitle = title
     if (action && title === btnTitles.productCardDefault ) {
       setNewTitle(btnTitles.productCardAdded)
+      dispatch(isAddToCartAction(true))
     }
     if (action && title === btnTitles.cartOrderProductsDefault){
       setNewTitle(btnTitles.cartOrderProductsGetted)

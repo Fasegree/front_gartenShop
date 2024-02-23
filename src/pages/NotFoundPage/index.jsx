@@ -21,10 +21,11 @@ export default function NotFoundPage(){
                 <p> We’re sorry, the page you requested could not be found.</p>
                 <p>Please go back to the homepage. </p>
 
-                <Link to="/" > 
-          
-                <ButtonCard title={btnTitles.notFoundGoHome}/>
-      </Link>
+                <div className={s.btnNotFound}>
+                    <Link to="/" > 
+                        <ButtonCard title={btnTitles.notFoundGoHome}/>
+                    </Link>
+                </div>
                 {/* <BtnCard action={''} btnText={'Go home'}/> */}
             </div>
         </div>

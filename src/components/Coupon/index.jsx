@@ -28,12 +28,12 @@ export default function InputCoupon({ page, action }) {
       if (success) {
         setUser(data)
         action && action();
-        // reset();
+        reset();
       if(page === isPage.home)
       dispatch(isGetCouponAction());
 
         dispatch(showModalAction());
-        // dispatch(removeAllFromCart());
+        dispatch(removeAllFromCart());
       setTimeout(()=>{
         dispatch(hideModalAction());
         console.log('asdsad');
@@ -61,7 +61,7 @@ export default function InputCoupon({ page, action }) {
           placeholder="Name"
         
           {...register('name', {
-            // required: 'Поле обязательно к заполнению',
+            required: 'Поле обязательно к заполнению',
             minLength: {
               // value: 3,
               message: ''
@@ -76,7 +76,7 @@ export default function InputCoupon({ page, action }) {
           placeholder="Phone number"
         
           {...register('phone', {
-            // required: 'Поле обязательно к заполнению',
+            required: 'Поле обязательно к заполнению',
           })}
         />
         <input
@@ -87,7 +87,7 @@ export default function InputCoupon({ page, action }) {
           placeholder="Email"
 
           {...register('email', {
-            // required: 'Поле обязательно к заполнению',
+            required: 'Поле обязательно к заполнению',
           })}
         />
         {page === isPage.cart ? (

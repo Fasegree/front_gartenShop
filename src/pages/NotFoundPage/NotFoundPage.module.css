@@ -8,7 +8,7 @@
     text-align: center;
 }
 .img404 {
-    margin: 0 auto;
+    margin: 80px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,28 @@
 .text p {
     text-align: center;
 }
-.text:last-child {
-   margin-bottom: 322px;
+.btnNotFound {
+    margin-top: 32px;
+}
+@media (max-width: 1440px) {
+    .img404 {
+        margin-top: 60px;
+    }
+}
+@media (max-width: 1000px) {
+    .img404 {
+        margin-top: 60px;
+    }
+}
+@media (max-width:768px) {
+    .btnNotFound {
+        margin-top: 24px;
+    }
+  
 }
 
+@media (max-width:480px) {
+    .img404 {
+        margin-top: 56px;
+    }
+}

@@ -1,5 +1,5 @@
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addManyToCartAction } from "../../../store/cartReducer";
 import s from './ProductItem.module.css'
 import ButtonCard from "../../../ui/Btns/BtnCard";
@@ -9,7 +9,7 @@ import { isAddToCartAction } from "../../../store/isAddReducer";
 
 export default function ProductItem({ prod }) {
     const dispatch = useDispatch()
-
+const isAddToCart = useSelector(state => state.isAdd)
     const { id, title, price, discont_price, description, image, categoryId } = prod
 
 
@@ -25,6 +25,8 @@ export default function ProductItem({ prod }) {
     };
     return (
         <div className={s.productCard}>
+            
+             {/* {<div className={`addProductToCartDiv ${isAddToCart && "show"}`}>ADD TO CART</div>} */}
             {discont_price &&
             <div className={s.discount}>{`-${Math.round(100 - discont_price * 100 / price)}%`}</div>}
             <div className={s.imageBtn}>

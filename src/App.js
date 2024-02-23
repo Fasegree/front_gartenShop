@@ -16,8 +16,8 @@ import Modal from './components/Modal';
 import CategoriesPage from './pages/CategoriesPage';
 import ScrollToTopButton from './ui/Btns/ScrollToUp';
 
-// export const ROOT_URL = 'http://localhost:3333'
-export const ROOT_URL = 'https://back-shopgarten.onrender.com'
+export const ROOT_URL = 'http://localhost:3333'
+// export const ROOT_URL = 'https://back-shopgarten.onrender.com'
 export const isPage = {
   home: 'home',
   all: 'all',
@@ -29,18 +29,18 @@ export const isPage = {
 }
 function App() {
   const isAddToCart = useSelector((state) => state.isAdd) ?? false;
-  // useEffect(() => {
+  const dispatch = useDispatch();
+  useEffect(() => {
 
-  // },[isAddToCart])
-
-console.log(isAddToCart);
+    dispatch(isAddToCartAction(false))
+  },[])
 
   
 
   return (
     <div className='app'>
       <ScrollToTopButton/>
-      {<div className={`addProductToCartDiv ${isAddToCart && "show"}`}>ADD TO CART</div>}
+      {/* {<div className={`addProductToCartDiv ${isAddToCart && "show"}`}>ADD TO CART</div>} */}
       {/* <Modal /> */}
       <Header/>
       <Routes>
