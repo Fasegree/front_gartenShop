@@ -17,8 +17,8 @@ import CategoriesPage from './pages/CategoriesPage';
 import ScrollToTopButton from './ui/Btns/ScrollToUp';
 import PopUpAddedProd from './components/PopUpAddedProd';
 
-export const ROOT_URL = 'http://localhost:3333'
-// export const ROOT_URL = 'https://back-shopgarten.onrender.com'
+// export const ROOT_URL = 'http://localhost:3333'
+ export const ROOT_URL = 'https://back-shopgarten.onrender.com'
 export const isPage = {
   home: 'home',
   all: 'all',
