@@ -37,12 +37,11 @@ export default function ProductList({type}) {
                 {products?.length > 0 && products.map(prod => (
                        
                     prod?.isShow && 
-                       <div>
+                       <div key={prod.id}>
 
                             <Link  key={prod.id} to={`/categories/${category}/${prod.id}`}>
                                 <ProductItem prod={prod} />
                             </Link>
-                                {/* <PopUpAddedProd prod={prod}/> */}
                        </div>
                        
                 ))}

@@ -9,6 +9,7 @@ import Modal from "../../components/Modal"
 import { isShowModalAction } from "../../store/isAddReducer"
 import { isPage } from "../../App"
 import { btnTitles } from "../../CONSTANTS"
+import BreadNavBtn from "../../ui/Btns/BreadNavBtn"
 
 export default function CartPage() {
     const productsCart = useSelector(store => store.cart)
@@ -65,7 +66,7 @@ export default function CartPage() {
                         <InputCoupon page={isPage.cart}  isModalVisible={isModalVisible} action={handleOrderClick}/>
                     </div>
                     </div>             
-                   
+                   <BreadNavBtn title={'Back to the store'} linkTo={'/products/all'} size360={true}/>
                 </div>
             ) : (
                 <div >

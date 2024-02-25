@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import { FaArrowCircleUp } from 'react-icons/fa';
 import styles from './Button.module.css';
+import arrow from './arrow.png'
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,12 +31,15 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <button
-      className={`${styles.scrollToTopButton} ${isVisible ? styles.showButton : ''}`}
-      onClick={scrollToTop}
-    >
-      {/* <FaArrowCircleUp /> */}
-    </button>
+    <div  className={`${styles.scrollToTopButton} ${isVisible ? styles.showButton : ''}`}  onClick={scrollToTop}   > 
+       
+
+         <img src={arrow} alt='img'/>
+     
+   
+
+    
+    </div>
   );
 };
 

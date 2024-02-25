@@ -11,8 +11,6 @@ import Control from '../../../ui/Btns/Control';
 export default function ProductInCart({ productsCart }) {
 
   const dispatch = useDispatch()
-  // const { id } = useParams();
-
 
   return (
     <div className={s.cardsWrapper}>

@@ -51,11 +51,11 @@ let style=''
     // console.log(action);
     return (
       <div>
-        <Link to={btnLink}>
+        {/* <Link to={btnLink}> */}
         <button className={ style } onClick={(e) => {changeStyle(e)} }   type="submit"> 
           { newTitle } 
         </button>
-        </Link>
+        {/* </Link> */}
       </div>
     );
 }

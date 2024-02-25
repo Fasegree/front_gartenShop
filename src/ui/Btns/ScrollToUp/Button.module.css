@@ -1,20 +1,31 @@
 .scrollToTopButton {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: none;
     bottom: 60px;
     right: 20px;
     border-radius: 50%;
     width: 60px;
-    aspect-ratio: 1;
+    height: 60px;
     z-index: 9;
     cursor: pointer;
-    background-color: #ffffff00;
-    opacity: .7;
-    transition: .3s ease-in;
-    backdrop-filter: blur(15px);
+     background-color: #ffffff3c;
+    opacity: 1;
+    transition: .5s ease; 
+    /* backdrop-filter: blur(3px); */
+    box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.563);
+
+    
+} 
+.scrollToTopButton img {
+    width: 30px;
+    /* filter: invert(10%); */
+    filter: drop-shadow(2px 2px 1px  black)
+
 }
 .scrollToTopButton:hover {
-    background-color: var(--green);
-    opacity: .9;
-    filter: blur(0px);
-    scale: 1.1;
+    padding-bottom: 20px;
+   
 }

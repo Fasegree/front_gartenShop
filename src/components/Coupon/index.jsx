@@ -11,7 +11,8 @@ import { removeAllFromCart } from '../../store/cartReducer';
 
 export default function InputCoupon({ page, action }) {
   const  {isGetCoupon, isShowModal}  = useSelector(store => store.isAdd)
-  const {productsInCart} = useSelector(store => store.cart)
+  const productsInCart = useSelector(store => store.cart)
+  console.log(productsInCart);
   const [user, setUser] = useState({name: ''})
   const dispatch = useDispatch()
   const { register, handleSubmit, reset } = useForm();
@@ -23,7 +24,7 @@ export default function InputCoupon({ page, action }) {
 
   const onSubmit = async (data) => {
     try {
-      const success = await postData(data); // Вызвать функцию postData с данными из формы
+      const success = await postData({data,  products: isPage.cart && productsInCart}); // Вызвать функцию postData с данными из формы
       // console.log(success);
       if (success) {
         setUser(data)
@@ -45,7 +46,7 @@ export default function InputCoupon({ page, action }) {
       alert('Произошла ошибка при отправке запроса!');
     }
   };
-  const text = ['Your order has been successfully placed on the website.', 'A manager will contact you shortly to confirm your order.11111111111111']
+  // const text = ['Your order has been successfully placed on the website.', 'A manager will contact you shortly to confirm your order.11111111111111']
   return (
     <div>
       {/* {isShowModal && (

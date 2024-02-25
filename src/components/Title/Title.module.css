@@ -13,7 +13,7 @@
 }
 .lineContainer{
     height: 2px;
-    background-color: rgb(139, 139, 139);
+    background-color: var(--grey-divider);
     position: absolute;
     top: 50%;
     right: 45px;

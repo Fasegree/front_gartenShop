@@ -17,16 +17,16 @@ export default function HomePage(){
         window.scrollTo(0, 0);
     },[])
     return(
-        <div className="container">
+        <div className="container"  onScroll={() =>console.log('67 == '+window.scrollY)}>
             <Recomend handleClick={handleClick} />
             
             <div className="wrapper">
 
-            <Title titleText={'Category'} btnText={`All categories`} btnLink={'/category/all'}/>
+            <Title titleText={'Categories'} btnText={`All categories`} btnLink={'/category/all'}/>
             </div>
             <CategoriesList type={isPage.home}/>
             <div >
-                <BreadNavBtn title={'All Caterhories'} linkTo={'/categories/all'} size360={true}/>
+                <BreadNavBtn title={'All categories'} linkTo={'/category/all'} size360={true}/>
             </div>
             <div className="wrapper">
                 <DiscountOrderForm/>

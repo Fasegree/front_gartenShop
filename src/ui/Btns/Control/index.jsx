@@ -11,11 +11,11 @@ export default function Control({ product, page }) {
     //================ for product page =================
     const productsInCart = useSelector(store => store.productsInCart);
     const dispatch = useDispatch()
-    const {  product_id } = useParams()
-    useEffect(()=>{
-      const oneProductInCart = productsInCart?.filter(prod => prod.id === product_id)
+    // const {  product_id } = useParams()
+    // useEffect(()=>{
+    //   const oneProductInCart = productsInCart?.filter(prod => prod.id === product_id)
   
-    },[])
+    // },[])
     
     const argumentsForFunctions = {
        product,

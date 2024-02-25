@@ -15,6 +15,7 @@ import { useEffect } from 'react';
 import Modal from './components/Modal';
 import CategoriesPage from './pages/CategoriesPage';
 import ScrollToTopButton from './ui/Btns/ScrollToUp';
+import PopUpAddedProd from './components/PopUpAddedProd';
 
 export const ROOT_URL = 'http://localhost:3333'
 // export const ROOT_URL = 'https://back-shopgarten.onrender.com'
@@ -38,9 +39,10 @@ function App() {
   
 
   return (
-    <div className='app'>
+    <div>
       <ScrollToTopButton/>
       {/* {<div className={`addProductToCartDiv ${isAddToCart && "show"}`}>ADD TO CART</div>} */}
+      <PopUpAddedProd/>
       {/* <Modal /> */}
       <Header/>
       <Routes>

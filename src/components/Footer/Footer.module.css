@@ -18,7 +18,10 @@
     background-color: var(--light-grey, #f00);
     /* min-width: 440px; */
 }
-
+.socials {
+    display: flex;
+    gap: 10px;
+}
 
 
 iframe {

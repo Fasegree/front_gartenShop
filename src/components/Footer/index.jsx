@@ -16,7 +16,7 @@ export default function Footer(){
             </div>
             <div>
                 <p>Socials</p>
-                <div>
+                <div className={s.socials}>
 
                     <a href="https://www.instagram.com/tel_ran/">
 

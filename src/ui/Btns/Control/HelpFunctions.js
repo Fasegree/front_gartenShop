@@ -1,5 +1,6 @@
 import { isPage } from "../../../App";
 import { addManyToCartAction, removeFromCart } from "../../../store/cartReducer";
+import { isAddToCartAction } from "../../../store/isAddReducer";
 import { incrControlCountAction } from "../../../store/productsReducer";
 
  //================ for product page =================
@@ -34,9 +35,12 @@ export function addPayload({    product,
                                 productsInCart,
                                 dispatch
                             }) {
-    // const payload =  {...product, count: product.count}
-    // console.log(product);
+                             
     dispatch(addManyToCartAction(product))
+    dispatch(isAddToCartAction(true))
+    setTimeout(() => {
+        dispatch(isAddToCartAction(false))
+    }, 2000);
 }
 
 //====================================================
