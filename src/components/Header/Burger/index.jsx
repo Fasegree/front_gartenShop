@@ -24,14 +24,14 @@ const BurgerMenu = () => {
         
         <div onClick={toggleMenu} className={s.wrapper}>
           
-          <div className={s.menu}>
+          <nav className={s.menu}>
             <ul className={s.nav}>
               <li onClick={closeMenu}><Link to={'/'}>Main Page</Link></li>
               <li onClick={closeMenu}><Link to={'/category/all'} type={isPage.all}>Categories</Link></li>
               <li onClick={closeMenu}><Link to={'/products/all'} type={isPage.all}>All products</Link></li>
               <li onClick={closeMenu}><Link to={'/discount'}>All sales</Link></li>                   
             </ul>
-          </div>
+          </nav>
         </div>
       )}
     </div>
